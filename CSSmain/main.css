@@ -1,0 +1,744 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manjari', sans-serif;
+}
+
+/* Home*/
+
+.carousel {
+    margin-top: 2px;
+    width: 100%;
+}
+
+.articulos {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.articulos article {
+    margin: 1px 2px;
+    padding: 2px;
+    margin: 10px 15px 15px 15px;
+    border-bottom: 10px groove rgb(168, 168, 233);
+}
+
+.articulos #articulo1,
+.articulos #articulo2,
+.articulos #articulo3 {
+    font-size: 1.5rem;
+}
+
+#articulo3 {
+    border-bottom: none;
+}
+
+article p {
+    text-align: justify;
+}
+
+article h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(5, 5, 131);
+}
+
+article h4 {
+    font-weight: bold;
+}
+
+.footer-h {
+    background-color: rgb(8, 3, 54);
+    color: cornsilk;
+    text-align: center;
+    height: 70px;
+    padding: 5px;
+    margin: auto;
+}
+
+.footer-h i {
+    padding-right: 30px;
+}
+
+@media (min-width: 768px) {
+
+    .carousel-inner {
+        height: 550px;
+    }
+
+    .articulos #articulo1,
+    .articulos #articulo2,
+    .articulos #articulo3 {
+        font-size: 2rem;
+    }
+
+
+    .footer-h h4 {
+        font-size: 20px;
+    }
+
+    .footer-h {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .carousel-inner {
+        height: 550px;
+    }
+
+    .articulos {
+        display: grid;
+        grid-template-columns: 3fr 3fr;
+    }
+
+    #articulo3 {
+        grid-column: 1/-1;
+        grid-row: 2;
+    }
+
+    .articulos #articulo1,
+    .articulos #articulo2,
+    .articulos #articulo3 {
+        font-size: 2rem;
+    }
+}
+
+
+/*Quienes Somos (q.html)*/
+
+.body-q {
+    font-size: 2rem;
+    background:url(../img/patitas.jpg);
+}
+
+.navegador {
+    background: 
+      radial-gradient(black 3px, transparent 4px),
+      radial-gradient(black 3px, transparent 4px),
+      linear-gradient(#fff 4px, transparent 0),
+      linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+      linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+    rgb(255, 255, 255);
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    padding: 15px 0;
+    border-bottom:2px solid black;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.nav-q {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 10px 0px; 
+}
+
+.nav-menu {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-evenly;  
+}
+
+.nav-menu li {
+    padding: 10px;
+    list-style: none;
+}
+
+.nav-menu li:hover {
+    border-bottom: 1px solid black;
+}
+
+.nav-menu a,
+.nav-menu iframe {
+    color: rgb(8, 3, 54);
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#denuncia {
+    color: rgb(163, 4, 4);
+    font-weight: bold;
+}
+
+.container {
+    background:url(../img/patitas.jpg);
+    width: 97%;
+    max-width: 1000px;
+    margin: 1.6em auto;
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.container .header {
+    font-size: large;
+}
+
+.container > .header,
+.container > .content,
+.container > .aside,
+.container > .footer, 
+.container > div {
+    padding: 15px;
+    border: 1px solid black;
+}
+
+.container .header,
+.container .footer {
+    grid-column: 1/5;
+    background-color: rgb(8, 3, 54);
+    color: cornsilk;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.container .content {
+    grid-column: span 3;
+    background-color: rgb(177, 169, 169);
+    color: floralwhite;
+    text-align: justify;
+}
+
+.container .aside {
+    grid-column: span 1;
+    gap: 1em;
+    background-color: rgb(177, 169, 169);
+    color: floralwhite;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.5s ease;
+}
+
+.container .aside img {
+    width: 100%;
+}
+
+.container .aside :hover {
+    background-color: honeydew;
+    color: black;
+    cursor: pointer;
+}
+
+.resaltar {
+    font-weight: bold;
+}
+
+.footer i {
+    padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 1.5rem;
+    }
+    .container .content {
+        grid-column: 1/-1;        
+    }
+    .container .aside {
+        grid-column: 1/-1;        
+    }
+
+    .container .aside div {
+        width: 100%;
+    }
+
+    .container .aside :hover {
+        background-color: rgb(77, 77, 77);
+        color: white;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+    }
+
+    iframe {
+       width: 100%;
+    }
+
+    .container .footer {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container .content {
+        grid-column: 1/-1;
+        background-color: rgb(245, 245, 245); 
+        color: black;
+    }
+    .container .aside {
+        grid-column: 1/-1;  
+        background-color: rgb(245, 245, 245); 
+        color: black;
+    }
+}
+
+/*Formulario*/
+
+#body-f {
+    background: 
+      radial-gradient(black 3px, transparent 4px),
+      radial-gradient(black 3px, transparent 4px),
+      linear-gradient(#fff 4px, transparent 0),
+      linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+      linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+    rgb(255, 255, 255);
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    box-sizing: border-box;
+    text-align: start;
+    padding: 0 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+    padding: 10px 0px;
+}
+
+.nav-formulario {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 2;
+    align-items: center;
+    justify-content: space-between;  
+    margin: 3rem;
+}
+
+.nav-formulario li {
+    padding: 10px;
+    list-style: none;
+}
+
+.nav-formulario li:hover {
+    border-bottom: 1px solid black;
+}
+
+.nav-formulario a {
+    color: rgb(8, 3, 54);
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.container-f {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+}
+
+.contact {
+    box-shadow: 0 0 20px 0 rgb(0, 0, 0);
+    background-color: rgb(199, 196, 196);
+}
+
+.contact > * {
+    padding: 1.5rem;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.form h3 {
+    font-size: 2rem;
+}
+
+form #email {
+    grid-column: 1 / 2;
+    grid-row: 2;
+}
+
+form #Apellido {
+    grid-column: 2 / 3;
+    grid-row: 1;
+}
+
+form #asunto {
+    grid-column: 2 / 3;
+    grid-row: 2;
+}
+
+form .block {
+    grid-column: 1/-1;
+}
+
+form p {
+    margin: 0;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.form input,
+.form button,
+.form textarea {
+    width: 100%;
+    padding: 0.3rem;
+    border: none;
+    outline: transparent;
+    color: white;
+    background-color: rgb(199, 196, 196);
+    border-bottom: 1px solid rgb(30, 30, 207);
+}
+
+.form button {
+    background-color: rgb(30, 30, 207);
+    padding: 1rem;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: large;
+}
+
+.form button:hover,
+.form button:focus {
+    background-color:rgb(62, 62, 233);
+    color: white;
+    border-bottom: none;
+    outline: 0;
+    transition: background-color 1s ease-out;
+}
+
+.info {
+    background-color: dimgray;
+    color:floralwhite;
+}
+
+.info h3,
+.info ul,
+.info p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+
+}
+
+.info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-h h4,
+.footer-h span {
+    padding: 5px;
+}
+
+@media (min-width: 768px) {
+    
+    #body-f {
+        padding: 4rem;
+    }
+
+    .titulo {
+          font-size: 6rem;
+    }
+
+    .titulo span {
+        color:red
+    }
+
+    nav {
+        height: 60px;
+    }
+
+    .nav-formulario {
+        flex-wrap: nowrap;
+    }
+
+    .nav-formulario a {
+        font-size: 2rem;
+    }
+
+    .contact {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+    }
+
+    .contact > * {
+        padding: 2rem;
+    }
+
+    .form h3 {
+        font-size: 3rem;
+    }
+    
+    .info {
+        padding: 3rem;
+        font-size: 1.6rem;
+    }
+
+    .info ul {
+        text-align: left;
+    }
+    
+    .info p {
+        text-align: justify;  
+    }
+}
+
+@media (min-width: 992px) {
+
+    #body-f {
+        padding: 5rem;
+    }
+
+    .titulo {
+         font-size: 7rem;
+         padding-bottom: 3rem;
+    }
+
+    .titulo span {
+        color:violet;
+    }
+
+    nav {
+        height: 60px;
+    }
+
+    .nav-formulario {
+        flex-wrap: nowrap;
+    }
+
+    .nav-formulario a {
+        font-size: 2rem;
+    }
+
+    .contact {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+
+    }
+
+    .contact > * {
+        padding: 4rem;
+    }
+
+    .form h3 {
+        font-size: 3rem;
+    }
+    
+    .info {
+        padding: 5rem;
+        font-size: 2rem;
+    }
+
+    .info ul {
+        text-align: left;
+    }
+    
+    .info p {
+        text-align: justify;
+    }
+}
+
+/*Adoptanos*/
+
+.body-a {
+    background: url("../img/patitas.jpg");
+}
+
+.container-a header h2 { 
+    margin: 20px 20px;
+    font-family: 'KoHo', sans-serif;
+    font-size: 2.3rem;
+    color: rgb(8, 3, 54);
+}
+
+.peques {
+    margin: 2px auto;
+    display: flex;
+    flex-direction: column; 
+}
+
+.peques div { 
+    display: block;
+    margin: 10px auto;
+    border: 1px solid gray;
+    width: 300px;   
+    background-color: white;
+}
+
+.peques div ul li {
+    list-style: none;
+    font-weight: bold;
+    padding: 5px; 
+    font-size: large;
+}
+
+.peques div:hover {
+    background-color: rgb(197, 197, 197);
+    color: white;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .container-a header h2 {
+        font-size: 3rem;
+    }
+
+    .peques {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+}
+
+@media (min-width: 992px) {
+    .peques {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+}
+
+/* Denunciá */
+
+.body-d {
+    background: url("../img/patitas.jpg");
+}
+
+#header-d {
+    grid-column: 1/-1;
+    grid-row: 1;
+        
+}
+
+#header-d h2 {
+    background-color: white;
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size:x-large;
+}
+
+.content-d {
+    grid-column: 1/-1;
+    grid-row: 2;
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.article h3,
+.article p {
+    margin: 2px;
+}
+
+.maltrato1 li {
+    margin: 10px 20px;
+}
+
+.ol li {
+    margin: 10px;
+}
+
+.maltrato2 li {
+    margin: 10px 20px;
+}
+
+.article2-d {
+    grid-column: 1/-1;
+    grid-row: 3;
+    background-color: ivory;
+    box-shadow: 0 0 20px 0 grey;
+}
+
+.container-d2 {
+    padding: 10px;
+}
+
+.container-d2 h3,
+.container-d2 p {
+    margin: 10px;
+}
+
+@media (min-width: 768px) {
+    .content-d {
+        margin: 10px;
+    }
+
+    #header-d h2 {
+        font-size: 3rem;
+    }
+
+    .article h3,
+    .article p {
+        font-size: 2rem;
+    }
+
+    .maltrato1 {
+        font-size: 2rem;
+    }
+
+    .maltrato1 li {
+        font-size: 2rem;
+    }
+
+       
+    .ol li {
+        font-size: 2rem;
+    }
+    
+    .maltrato2 {
+        font-size: 2rem;
+    }
+
+    .maltrato2 li {
+        font-size: 2rem;
+    }
+
+    .container-d2 h3,
+    .container-d2 p {
+        font-size: 2rem;
+    }
+    
+
+}
+
+@media (min-width: 992px) {
+    #header-d h2 {
+        font-size: 4rem;
+    }
+
+    .content-d {
+        grid-column: 1/4;
+        grid-row: 2;
+    }
+
+    .article2-d {
+        grid-column: 4/5;
+        grid-row: 2;
+    }
+
+    .container-d2 h3,
+    .container-d2 p {
+        font-size: 1.5rem;
+    }
+
+
+}
+
+
+
+
+
+
+
+
